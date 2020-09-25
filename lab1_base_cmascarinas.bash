@@ -7,7 +7,7 @@ fi
 
 echo "The script's output will be located in this directory"
 
-if [ "$HOSTNAME" == "spr500.localdomain" ]; then
+if [ "$HOSTNAME" == "mtrx-node03pd.dcm.senecacollege.ca" ]; then
 	file=./cmascarinas_matrix_base.txt
 	exec 1>$file
 elif [ "$HOSTNAME" == "vm1.localdomain" ]; then  
