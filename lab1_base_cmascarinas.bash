@@ -1,16 +1,13 @@
 #!/bin/bash
 
-if [[ $EUID -ne 0 ]]; then
-	echo "This script must be run as root"
-	exit 1
-fi 
+#if [[ $EUID -ne 0 ]]; then
+#	echo "This script must be run as root"
+#	exit 1
+#fi 
 
 echo "The script's output will be located in this directory"
 
-if [ "$HOSTNAME" == "mtrx-node03pd.dcm.senecacollege.ca" ]; then
-	file=./cmascarinas_matrix_base.txt
-	exec 1>$file
-elif [ "$HOSTNAME" == "vm1.localdomain" ]; then  
+if [ "$HOSTNAME" == "vm1.localdomain" ]; then  
 	file=./cmascarinas_gateway_base.txt
 	exec 1>$file
 elif [ "$HOSTNAME" == "vm2.localdomain" ]; then
@@ -23,10 +20,9 @@ elif	[ "$HOSTNAME" == "vm4.localdomain" ]; then
         file=./cmascarinas_vm4_base.txt
 	exec 1>$file	
 else 
-	echo "Your machine is not listed as one of the machines that can run this script."
-	exit 1
+	file=./cmascarinas_matrix_base.txt
+	exec 1>$file 
 fi
-
 
 echo -e "\n This scan was run on `date` "
 
@@ -56,7 +52,12 @@ echo -e "Processor:  `cat /proc/cpuinfo | grep processor | wc -l`"
 echo -e "Linux Kernel Version: `uname -mrs`"
 
 echo -e "\n ********** Disk Partition Information **********"
-fdisk -l
+
+if [[ $EUID -ne 0 ]]; then
+	echo "Permission denied"
+else
+	fdisk -l
+fi	
 
 echo -e "\n ------------------------------------------------- "
 echo -e "              NETWORK INFORMAITON"
@@ -71,20 +72,28 @@ ip r
 echo -e "\n ------------------------------------------------- "
 echo -e "              SECURITY INFORMATION"
 echo -e " ------------------------------------------------"
+
 echo -e "\n ********** SELinux **********"
 echo -e "`sestatus | sed 's/\(.*\)/     \1/'`"
 echo -e "\n ********** Firewall **********"
-echo -e "Status: `firewall-cmd --state | sed 's/\(.*\)/    \1/'`"
-echo -e "List of services: `firewall-cmd --list-services | sed 's/\(.*\)/    \1/'`"
+if [[ $EUID -ne 0 ]]; then
+	echo -e "Status: Permission Denied."
+	echo -e "List of services: Permission Denied."
+else
+	echo -e "Status: `firewall-cmd --state`" 
+	echo -e "List of services: `firewall-cmd --list-services`"
+fi 
 
 echo -e "\n ---------------------------------------------------"
 echo -e "              SOFTWARE/SERVICE INFORMATION"
 echo -e " ---------------------------------------------------"
+
+
 echo -e "\n ********** Repo list of Operating System **********"
-yum repolist | sed 's/\(.*\)/    \1/'
+yum repolist
 echo -e "\n ********** Services that are currently running ********** "
 systemctl | grep running
 echo -e "\n ********** Services installed but not running ********** "
 systemctl list-units -all --state=inactive
-
+ 
 exec 2>&1
