@@ -1,0 +1,306 @@
+
+ This scan was run on Fri Sep 25 18:21:31 EDT 2020 
+
+ ----------------------------------------------- 
+              GENERAL INFORMATION
+ ------------------------------------------------ 
+
+Hostname:
+mtrx-node03pd
+dcm
+senecacollege
+
+ Operating System:
+"CentOS Linux 7 (Core)"
+
+First Installation:
+ Fri Nov  3 13:47:01 2017
+
+Current Active User:
+pthoang3
+alow5
+balphons
+lkatchut
+pyang9
+fardad.s
+mjafari2
+cmascari
+
+ ------------------------------------------------ 
+              HARDWARE INFORMATION
+ ------------------------------------------------ 
+
+ ********** Block Devices Information ***********
+NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda               8:0    0   60G  0 disk 
+|-sda1            8:1    0  200M  0 part /boot/efi
+|-sda2            8:2    0    1G  0 part /boot
+`-sda3            8:3    0 58.8G  0 part 
+  |-centos-root 253:0    0 49.8G  0 lvm  /
+  |-centos-swap 253:1    0    4G  0 lvm  [SWAP]
+  `-centos-tmp  253:2    0    5G  0 lvm  /tmp
+
+ ********** Disk space usage **********
+Filesystem               Size  Used Avail Use% Mounted on
+devtmpfs                 1.9G     0  1.9G   0% /dev
+tmpfs                    1.9G  4.0K  1.9G   1% /dev/shm
+tmpfs                    1.9G   11M  1.9G   1% /run
+tmpfs                    1.9G     0  1.9G   0% /sys/fs/cgroup
+/dev/mapper/centos-root   50G  8.7G   42G  18% /
+/dev/sda2               1014M  320M  695M  32% /boot
+/dev/sda1                200M   16M  184M   8% /boot/efi
+/dev/mapper/centos-tmp   5.0G  337M  4.7G   7% /tmp
+mtrx-home01pd:/home      2.0T  237G  1.8T  12% /home
+tmpfs                    376M     0  376M   0% /run/user/1018
+tmpfs                    376M     0  376M   0% /run/user/53143
+tmpfs                    376M     0  376M   0% /run/user/58808
+tmpfs                    376M     0  376M   0% /run/user/59264
+tmpfs                    376M     0  376M   0% /run/user/53566
+tmpfs                    376M     0  376M   0% /run/user/58715
+tmpfs                    376M     0  376M   0% /run/user/55388
+tmpfs                    376M     0  376M   0% /run/user/56770
+tmpfs                    376M     0  376M   0% /run/user/56763
+tmpfs                    376M     0  376M   0% /run/user/49253
+tmpfs                    376M     0  376M   0% /run/user/56797
+tmpfs                    376M     0  376M   0% /run/user/58775
+tmpfs                    376M     0  376M   0% /run/user/52829
+tmpfs                    376M     0  376M   0% /run/user/56734
+
+ ********** Disk Information **********
+vendor_id	: GenuineIntel
+model name	: Intel(R) Xeon(R) CPU E5-2650 v3 @ 2.30GHz
+Processor:  4
+Linux Kernel Version: Linux 3.10.0-1127.18.2.el7.x86_64 x86_64
+
+ ********** Disk Partition Information **********
+Permission denied
+
+ ------------------------------------------------- 
+              NETWORK INFORMAITON
+ ------------------------------------------------ 
+
+ ********** DNS Server configured **********
+nameserver 10.101.100.41
+
+ ********** Network devices, IP address, Broadcast, and Netmask **********
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.102.108.5/32 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:1d:d8:b7:1c:93 brd ff:ff:ff:ff:ff:ff
+    inet 10.102.108.13/26 brd 10.102.108.63 scope global noprefixroute eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::21d:d8ff:feb7:1c93/64 scope link 
+       valid_lft forever preferred_lft forever
+
+ ********** IP routes **********
+default via 10.102.108.1 dev eth0 proto static metric 100 
+10.102.108.0/26 dev eth0 proto kernel scope link src 10.102.108.13 metric 100 
+
+ ------------------------------------------------- 
+              SECURITY INFORMATION
+ ------------------------------------------------
+
+ ********** SELinux **********
+     SELinux status:                 disabled
+
+ ********** Firewall **********
+Status: Permission Denied.
+List of services: Permission Denied.
+
+ ---------------------------------------------------
+              SOFTWARE/SERVICE INFORMATION
+ ---------------------------------------------------
+
+ ********** Repo list of Operating System **********
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * epel: mirror.siena.edu
+ * remi-php72: mirror.team-cymru.com
+ * remi-safe: mirror.team-cymru.com
+repo id                            repo name                              status
+!WANdisco-git/7/x86_64             WANdisco Distribution of git             350
+!base/7/x86_64                     CentOS-7 - Base                        10070
+!epel/x86_64                       Extra Packages for Enterprise Linux 7  13426
+!extras/7/x86_64                   CentOS-7 - Extras                        413
+!ius/x86_64                        IUS for Enterprise Linux 7 - x86_64      487
+!mysql-connectors-community/x86_64 MySQL Connectors Community               165
+!mysql-tools-community/x86_64      MySQL Tools Community                    115
+!mysql57-community/x86_64          MySQL 5.7 Community Server               444
+!remi-php72                        Remi's PHP 7.2 RPM repository for Ente   412
+!remi-safe                         Safe Remi's RPM repository for Enterpr  3842
+!updates/7/x86_64                  CentOS-7 - Updates                      1112
+repolist: 30836
+
+ ********** Services that are currently running ********** 
+proc-sys-fs-binfmt_misc.automount                                                                                                                       loaded active running   Arbitrary Executable File Formats File System Automount Point
+session-121.scope                                                                                                                                       loaded active running   Session 121 of user mjafari22
+session-157.scope                                                                                                                                       loaded active running   Session 157 of user alow5
+session-239.scope                                                                                                                                       loaded active running   Session 239 of user cmascarinas
+session-260.scope                                                                                                                                       loaded active running   Session 260 of user xpan31
+session-265.scope                                                                                                                                       loaded active running   Session 265 of user dlee143
+session-271.scope                                                                                                                                       loaded active running   Session 271 of user pyang9
+session-275.scope                                                                                                                                       loaded active running   Session 275 of user sbahrami7
+session-277.scope                                                                                                                                       loaded active running   Session 277 of user poreilly
+session-278.scope                                                                                                                                       loaded active running   Session 278 of user sbahrami7
+session-280.scope                                                                                                                                       loaded active running   Session 280 of user pthoang3
+session-282.scope                                                                                                                                       loaded active running   Session 282 of user balphonse
+session-283.scope                                                                                                                                       loaded active running   Session 283 of user lkatchutas
+session-284.scope                                                                                                                                       loaded active running   Session 284 of user smutharasan
+session-54.scope                                                                                                                                        loaded active running   Session 54 of user fardad.soleimanloo
+auditd.service                                                                                                                                          loaded active running   Security Auditing Service
+crond.service                                                                                                                                           loaded active running   Command Scheduler
+dbus.service                                                                                                                                            loaded active running   D-Bus System Message Bus
+ds_agent.service                                                                                                                                        loaded active running   Trend Micro Deep Security Agent
+fail2ban.service                                                                                                                                        loaded active running   Fail2Ban Service
+getty@tty1.service                                                                                                                                      loaded active running   Getty on tty1
+gssproxy.service                                                                                                                                        loaded active running   GSSAPI Proxy Daemon
+httpd.service                                                                                                                                           loaded active running   The Apache HTTP Server
+irqbalance.service                                                                                                                                      loaded active running   irqbalance daemon
+lvm2-lvmetad.service                                                                                                                                    loaded active running   LVM2 metadata daemon
+NetworkManager.service                                                                                                                                  loaded active running   Network Manager
+nslcd.service                                                                                                                                           loaded active running   Naming services LDAP client daemon.
+ntpd.service                                                                                                                                            loaded active running   Network Time Service
+polkit.service                                                                                                                                          loaded active running   Authorization Manager
+postfix.service                                                                                                                                         loaded active running   Postfix Mail Transport Agent
+rpc-rquotad.service                                                                                                                                     loaded active running   Remote quota server
+rpcbind.service                                                                                                                                         loaded active running   RPC bind service
+rsyslog.service                                                                                                                                         loaded active running   System Logging Service
+snmpd.service                                                                                                                                           loaded active running   Simple Network Management Protocol (SNMP) Daemon.
+sshd.service                                                                                                                                            loaded active running   OpenSSH server daemon
+systemd-journald.service                                                                                                                                loaded active running   Journal Service
+systemd-logind.service                                                                                                                                  loaded active running   Login Service
+systemd-udevd.service                                                                                                                                   loaded active running   udev Kernel Device Manager
+tuned.service                                                                                                                                           loaded active running   Dynamic System Tuning Daemon
+ypbind.service                                                                                                                                          loaded active running   NIS/YP (Network Information Service) Clients to NIS Domain Binder
+dbus.socket                                                                                                                                             loaded active running   D-Bus System Message Bus Socket
+lvm2-lvmetad.socket                                                                                                                                     loaded active running   LVM2 metadata daemon socket
+rpcbind.socket                                                                                                                                          loaded active running   RPCbind Server Activation Socket
+systemd-journald.socket                                                                                                                                 loaded active running   Journal Socket
+systemd-udevd-control.socket                                                                                                                            loaded active running   udev Control Socket
+systemd-udevd-kernel.socket                                                                                                                             loaded active running   udev Kernel Socket
+
+ ********** Services installed but not running ********** 
+  UNIT                                                  LOAD      ACTIVE   SUB  DESCRIPTION
+  proc-fs-nfsd.mount                                    loaded    inactive dead NFSD configuration filesystem
+  sys-fs-fuse-connections.mount                         loaded    inactive dead FUSE Control File System
+* sysroot.mount                                         not-found inactive dead sysroot.mount
+  systemd-ask-password-console.path                     loaded    inactive dead Dispatch Password Requests to Console Directory Watch
+  auth-rpcgss-module.service                            loaded    inactive dead Kernel Module supporting RPCSEC_GSS
+  brandbot.service                                      loaded    inactive dead Flexible Branding Service
+  cpupower.service                                      loaded    inactive dead Configure CPU power related settings
+* display-manager.service                               not-found inactive dead display-manager.service
+  dm-event.service                                      loaded    inactive dead Device-mapper event daemon
+  dracut-cmdline.service                                loaded    inactive dead dracut cmdline hook
+  dracut-initqueue.service                              loaded    inactive dead dracut initqueue hook
+  dracut-mount.service                                  loaded    inactive dead dracut mount hook
+  dracut-pre-mount.service                              loaded    inactive dead dracut pre-mount hook
+  dracut-pre-pivot.service                              loaded    inactive dead dracut pre-pivot and cleanup hook
+  dracut-pre-trigger.service                            loaded    inactive dead dracut pre-trigger hook
+  dracut-pre-udev.service                               loaded    inactive dead dracut pre-udev hook
+  dracut-shutdown.service                               loaded    inactive dead Restore /run/initramfs
+  ebtables.service                                      loaded    inactive dead Ethernet Bridge Filtering tables
+  emergency.service                                     loaded    inactive dead Emergency Shell
+* exim.service                                          not-found inactive dead exim.service
+* fcoe.service                                          not-found inactive dead fcoe.service
+  firewalld.service                                     loaded    inactive dead firewalld - dynamic firewall daemon
+* hv_fcopy_daemon.service                               not-found inactive dead hv_fcopy_daemon.service
+* hv_kvp_daemon.service                                 not-found inactive dead hv_kvp_daemon.service
+* hv_vss_daemon.service                                 not-found inactive dead hv_vss_daemon.service
+  initrd-cleanup.service                                loaded    inactive dead Cleaning Up and Shutting Down Daemons
+  initrd-parse-etc.service                              loaded    inactive dead Reload Configuration from the Real Root
+  initrd-switch-root.service                            loaded    inactive dead Switch Root
+  initrd-udevadm-cleanup-db.service                     loaded    inactive dead Cleanup udevd DB
+  ip6tables.service                                     loaded    inactive dead IPv6 firewall with ip6tables
+* ipset.service                                         not-found inactive dead ipset.service
+* iscsi-shutdown.service                                not-found inactive dead iscsi-shutdown.service
+* iscsi.service                                         not-found inactive dead iscsi.service
+* iscsid.service                                        not-found inactive dead iscsid.service
+* lvm2-activation-early.service                         not-found inactive dead lvm2-activation-early.service
+* lvm2-activation.service                               not-found inactive dead lvm2-activation.service
+  lvm2-lvmpolld.service                                 loaded    inactive dead LVM2 poll daemon
+  mdmonitor.service                                     loaded    inactive dead Software RAID monitoring and management
+  microcode.service                                     loaded    inactive dead Load CPU microcode update
+  multipathd.service                                    loaded    inactive dead Device-Mapper Multipath Device Controller
+* named.service                                         not-found inactive dead named.service
+  network.service                                       loaded    inactive dead LSB: Bring up/down networking
+  nfs-config.service                                    loaded    inactive dead Preprocess NFS configuration
+  nfs-idmapd.service                                    loaded    inactive dead NFSv4 ID-name mapping service
+  nfs-mountd.service                                    loaded    inactive dead NFS Mount Daemon
+* nfs-secure-server.service                             not-found inactive dead nfs-secure-server.service
+  nfs-server.service                                    loaded    inactive dead NFS server and services
+  nfs-utils.service                                     loaded    inactive dead NFS server and client services
+* nftables.service                                      not-found inactive dead nftables.service
+  ntpdate.service                                       loaded    inactive dead Set time via NTP
+  plymouth-quit-wait.service                            loaded    inactive dead Wait for Plymouth Boot Screen to Quit
+  plymouth-quit.service                                 loaded    inactive dead Terminate Plymouth Boot Screen
+  plymouth-read-write.service                           loaded    inactive dead Tell Plymouth To Write Out Runtime Data
+  plymouth-start.service                                loaded    inactive dead Show Plymouth Boot Screen
+  plymouth-switch-root.service                          loaded    inactive dead Plymouth switch root service
+* rbdmap.service                                        not-found inactive dead rbdmap.service
+  rescue.service                                        loaded    inactive dead Rescue Shell
+  rhel-autorelabel-mark.service                         loaded    inactive dead Mark the need to relabel after reboot
+  rhel-autorelabel.service                              loaded    inactive dead Relabel all filesystems, if necessary
+  rhel-configure.service                                loaded    inactive dead Reconfigure the system on administrator request
+  rhel-loadmodules.service                              loaded    inactive dead Load legacy module configuration
+  rpc-gssd.service                                      loaded    inactive dead RPC security service for NFS client and server
+  rpc-statd-notify.service                              loaded    inactive dead Notify NFS peers of a restart
+  rpc-statd.service                                     loaded    inactive dead NFS status monitor for NFSv2/3 locking.
+  selinux-policy-migrate-local-changes@targeted.service loaded    inactive dead Migrate local SELinux policy changes from the old store structure to the new structure
+* sendmail.service                                      not-found inactive dead sendmail.service
+* slapd.service                                         not-found inactive dead slapd.service
+* sntp.service                                          not-found inactive dead sntp.service
+  sshd-keygen.service                                   loaded    inactive dead OpenSSH Server Key Generation
+* syslog.service                                        not-found inactive dead syslog.service
+  systemd-ask-password-console.service                  loaded    inactive dead Dispatch Password Requests to Console
+  systemd-ask-password-plymouth.service                 loaded    inactive dead Forward Password Requests to Plymouth
+  systemd-ask-password-wall.service                     loaded    inactive dead Forward Password Requests to Wall
+  systemd-firstboot.service                             loaded    inactive dead First Boot Wizard
+  systemd-fsck-root.service                             loaded    inactive dead File System Check on Root Device
+  systemd-hwdb-update.service                           loaded    inactive dead Rebuild Hardware Database
+  systemd-initctl.service                               loaded    inactive dead /dev/initctl Compatibility Daemon
+  systemd-journal-catalog-update.service                loaded    inactive dead Rebuild Journal Catalog
+  systemd-machine-id-commit.service                     loaded    inactive dead Commit a transient machine-id on disk
+  systemd-modules-load.service                          loaded    inactive dead Load Kernel Modules
+  systemd-readahead-collect.service                     loaded    inactive dead Collect Read-Ahead Data
+  systemd-readahead-done.service                        loaded    inactive dead Stop Read-Ahead Data Collection
+  systemd-readahead-replay.service                      loaded    inactive dead Replay Read-Ahead Data
+  systemd-reboot.service                                loaded    inactive dead Reboot
+  systemd-shutdownd.service                             loaded    inactive dead Delayed Shutdown Service
+* systemd-sysusers.service                              not-found inactive dead systemd-sysusers.service
+  systemd-tmpfiles-clean.service                        loaded    inactive dead Cleanup of Temporary Directories
+  systemd-update-done.service                           loaded    inactive dead Update is Completed
+  systemd-update-utmp-runlevel.service                  loaded    inactive dead Update UTMP about System Runlevel Changes
+* yppasswdd.service                                     not-found inactive dead yppasswdd.service
+* ypserv.service                                        not-found inactive dead ypserv.service
+* ypxfrd.service                                        not-found inactive dead ypxfrd.service
+  sshd.socket                                           loaded    inactive dead OpenSSH Server Socket
+  syslog.socket                                         loaded    inactive dead Syslog Socket
+* dirsrv.target                                         not-found inactive dead dirsrv.target
+  emergency.target                                      loaded    inactive dead Emergency Mode
+  final.target                                          loaded    inactive dead Final Step
+  getty-pre.target                                      loaded    inactive dead Login Prompts (Pre)
+  graphical.target                                      loaded    inactive dead Graphical Interface
+  initrd-fs.target                                      loaded    inactive dead Initrd File Systems
+  initrd-root-fs.target                                 loaded    inactive dead Initrd Root File System
+  initrd-switch-root.target                             loaded    inactive dead Switch Root
+  initrd.target                                         loaded    inactive dead Initrd Default Target
+  nss-lookup.target                                     loaded    inactive dead Host and Network Name Lookups
+  rescue.target                                         loaded    inactive dead Rescue Mode
+  shutdown.target                                       loaded    inactive dead Shutdown
+* syslog.target                                         not-found inactive dead syslog.target
+  time-sync.target                                      loaded    inactive dead System Time Synchronized
+  umount.target                                         loaded    inactive dead Unmount All Filesystems
+  systemd-readahead-done.timer                          loaded    inactive dead Stop Read-Ahead Data Collection 10s After Completed Startup
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+110 loaded units listed.
+To show all installed unit files use 'systemctl list-unit-files'.
